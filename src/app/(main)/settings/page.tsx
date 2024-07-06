@@ -65,7 +65,7 @@ const FormSchema = z.object({
   }),
 });
 
-const settings = () => {
+const Setting = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -274,4 +274,4 @@ const settings = () => {
     </main>
   );
 };
-export default settings;
+export default Setting;
