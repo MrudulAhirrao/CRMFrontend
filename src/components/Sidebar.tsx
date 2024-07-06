@@ -63,17 +63,17 @@ return (
               <CommandList style={{ overflow: 'visible' }}>
                 <CommandEmpty>No results found.</CommandEmpty>
                 {menu.map((menu: any, key: number) => (
-                  <CommandGroup key={key} heading={menu.group}>
-                    {menu.items.map((option: any, optionKey: number) => (
-                        <Link href={option.link} className={'bg-gray-100' }>
-                          <CommandItem className="font-semibold flex gap-2 cursor-pointer">
-                            {option.icon}
-                            {option.text}
-                          </CommandItem>
-                        </Link>
-                    ))}
-                  </CommandGroup>
-                ))}
+  <CommandGroup key={key} heading={menu.group}>
+    {menu.items.map((option: any, optionKey: number) => (
+      <Link key={optionKey} href={option.link} className={'bg-gray-100' }>
+        <CommandItem className="font-semibold flex gap-2 cursor-pointer text-sm">
+          {option.icon}
+          {option.text}
+        </CommandItem>
+      </Link>
+    ))}
+  </CommandGroup>
+))}
                 {/* <CommandSeparator /> */}
               </CommandList>
             </Command>
